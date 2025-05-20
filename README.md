@@ -47,42 +47,14 @@ A arquitetura do projeto é composta por três etapas principais:
   - Área do *bounding box* da moto
 - **Justificativa:** Agrupamento de motos com placas semelhantes ou características compatíveis, mesmo em casos de OCR parcial ou falho.
 
-     +---------------------------+
-     |  📸 Imagens de entrada   |
-     +--------------------------+
-                    |
-                    v
-       +--------------------------+
-       | 🕵️‍♂️ Detecção de motos  |
-       | (YOLOv5 - Ultralytics)   |
-       +--------------------------+
-                    |
-                    v
- +------------------------------------------+
- | 🧾 OCR para leitura de placas (EasyOCR)  |
- +------------------------------------------+
-                    |
-                    v
-+------------------------------------------------------+
-| 📊 Extração de features:                             |
-| - Tamanho da placa                                   |
-| - Nº de letras e dígitos                             |
-| - Área da caixa delimitadora (bounding box)          |
-+------------------------------------------------------+
-                    |
-                    v
-   +--------------------------------------------+
-   | 🤖 Agrupamento com KMeans (n_clusters=3)   |
-   +--------------------------------------------+
-                    |
-                    v
-   +--------------------------------------------------+
-   | 🗂️ Saída CSV com:                               |
-   | - Moto ID por imagem                            |
-   | - Placa extraída                                 |
-   | - Grid em que a moto está                       |
-   | - Grupo identificado pelo modelo KMeans         |
-   +--------------------------------------------------+
+```mermaid
+graph TD
+    A[📸 Imagens de Entrada] --> B[🕵️‍♂️ Detecção de Motos (YOLOv5)]
+    B --> C[🧾 Leitura das Placas (EasyOCR)]
+    C --> D[📊 Extração de Features]
+    D --> E[🤖 Agrupamento com KMeans]
+    E --> F[🗂️ Saída em CSV com ID, Placa, Grid e Grupo]
+
 
 ---
 
