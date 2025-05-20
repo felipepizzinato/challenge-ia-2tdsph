@@ -51,7 +51,6 @@ A arquitetura do projeto é composta por três etapas principais:
 ├── data/
 │ ├── imagens/ # Imagens de entrada
 │ └── resultado_placas.csv # Resultados e agrupamentos
-├── pitch_visualizacao.ipynb # Visualizações e grids
 └── README.md # Documentação do projeto
 
 ```
@@ -70,9 +69,24 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ---
 
-## ▶️ Como Rodar o Projeto
+## 📊 Resultados
+- O sistema detecta motos em imagens e tenta extrair placas com OCR.
 
-1. **Clone o repositório:**
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+- As placas são validadas e, quando possíveis, agrupadas por similaridade.
+
+- Mesmo placas parcialmente ilegíveis são agrupadas por semelhança (usando KMeans).
+
+## 📎 Observações Finais
+- As imagens podem conter placas ilegíveis ou moto com placas ausentes — o sistema tenta identificar padrões em outros atributos (área, formato, quantidade de letras/dígitos).
+
+- Visualizações das motos e seus grids estão disponíveis no notebook pitch_visualizacao.ipynb.
+
+- código foi modularizado para facilitar expansão e manutenções futuras.
+
+## 🧠 Futuras Melhorias 
+
+- Adicionar validação com regex mais robusta (ex: padrão Mercosul)
+
+- Interface Web para uploads e resultados instantâneos
+
+- Uso de embeddings ou modelos supervisionados para similaridade entre placas
