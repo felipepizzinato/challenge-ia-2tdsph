@@ -49,17 +49,44 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ## 🔁 Fluxo do Sistema
 
-[![Step1-Imagens](https://img.shields.io/badge/📸_Imagens-Entrada-blue)]()
-⬇️  
-[![Step2-Detecção](https://img.shields.io/badge/🕵️‍♂️_Detecção_de_Motos-YOLOv5-orange)]()
-⬇️  
-[![Step3-OCR](https://img.shields.io/badge/🧾_Leitura_de_Placas-EasyOCR-yellow)]()
-⬇️  
-[![Step4-Features](https://img.shields.io/badge/📊_Extração_de_Features-gray)]()
-⬇️  
-[![Step5-KMeans](https://img.shields.io/badge/🤖_Agrupamento-KMeans-blueviolet)]()
-⬇️  
-[![Step6-CSV](https://img.shields.io/badge/🗂️_Saída-CSV-green)]()
+  ```    +--------------------------+
+       |  📸 Imagens de entrada   |
+       +--------------------------+
+                    |
+                    v
+       +--------------------------+
+       | 🕵️‍♂️ Detecção de motos  |
+       | (YOLOv5 - Ultralytics)   |
+       +--------------------------+
+                    |
+                    v
+ +------------------------------------------+
+ | 🧾 OCR para leitura de placas (EasyOCR)  |
+ +------------------------------------------+
+                    |
+                    v
++------------------------------------------------------+
+| 📊 Extração de features:                             |
+| - Tamanho da placa                                   |
+| - Nº de letras e dígitos                             |
+| - Área da caixa delimitadora (bounding box)          |
++------------------------------------------------------+
+                    |
+                    v
+   +--------------------------------------------+
+   | 🤖 Agrupamento com KMeans (n_clusters=3)   |
+   +--------------------------------------------+
+                    |
+                    v
+   +--------------------------------------------------+
+   | 🗂️ Saída CSV com:                               |
+   | - Moto ID por imagem                            |
+   | - Placa extraída                                 |
+   | - Grid em que a moto está                       |
+   | - Grupo identificado pelo modelo KMeans         |
+   +--------------------------------------------------+
+```
+
 
 
 ## 🏗️ Arquitetura do Projeto
