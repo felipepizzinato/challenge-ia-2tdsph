@@ -41,6 +41,7 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ## 🏗️ Arquitetura do Projeto
 
+```
 📦 projeto/
 ├── main.py # Pipeline principal
 ├── ml_model/
@@ -53,7 +54,7 @@ A arquitetura do projeto é composta por três etapas principais:
 ├── pitch_visualizacao.ipynb # Visualizações e grids
 └── README.md # Documentação do projeto
 
-
+```
 ---
 
 ## 🛠️ Tecnologias e Bibliotecas
