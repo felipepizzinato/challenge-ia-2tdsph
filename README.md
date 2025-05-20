@@ -44,4 +44,61 @@ A arquitetura geral do projeto envolve três etapas principais:
 │   ├── imagens/                 # Imagens de entrada
 │   └── resultado_placas.csv     # Saída com resultados e agrupamento
 |
-└── README.md                    # Este documento
+└── README.md                    # Este documento```
+
+---
+
+## 🛠️ Tecnologias e Bibliotecas
+Categoria	Ferramenta / Framework
+📦 Detecção de Objetos	YOLOv5 (Ultralytics)
+🧾 OCR	EasyOCR
+🧪 Machine Learning	Scikit-learn (KMeans, StandardScaler)
+🐍 Linguagem	Python 3.10+
+📊 Manipulação de dados	Pandas, NumPy
+📷 Visualização	Matplotlib
+
+## 🧪 Como Rodar
+1. Clone o repositório:
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+cd nome-do-repositorio
+2. Instale as dependências:
+bash
+Copiar
+Editar
+pip install -r requirements.txt
+3. Adicione as imagens em data/imagens/.
+4. Execute o pipeline principal:
+bash
+Copiar
+Editar
+python main.py
+📊 Resultados
+O sistema detecta motos em imagens e tenta extrair placas com OCR.
+
+As placas são validadas e, quando possíveis, agrupadas por similaridade.
+
+Mesmo placas parcialmente ilegíveis são agrupadas por semelhança (usando KMeans).
+
+📎 Observações Finais
+As imagens podem conter placas ilegíveis ou moto com placas ausentes — o sistema tenta identificar padrões em outros atributos (área, formato, quantidade de letras/dígitos).
+
+Visualizações das motos e seus grids estão disponíveis no notebook pitch_visualizacao.ipynb.
+
+O código foi modularizado para facilitar expansão e manutenções futuras.
+
+🧠 Futuras Melhorias
+Substituir OCR por uma rede treinada exclusivamente para placas brasileiras
+
+Adicionar validação com regex mais robusta (ex: padrão Mercosul)
+
+Interface Web para uploads e resultados instantâneos
+
+Uso de embeddings ou modelos supervisionados para similaridade entre placas
+
+👨‍💻 Autor
+Seu Nome Aqui
+
+
