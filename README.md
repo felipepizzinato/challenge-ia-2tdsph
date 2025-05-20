@@ -143,3 +143,18 @@ A arquitetura do projeto é composta por três etapas principais:
 - Interface Web para uploads e resultados instantâneos
 
 - Uso de embeddings ou modelos supervisionados para similaridade entre placas
+  
+
+---
+
+## 🧪 Validação/Resultados
+
+## 📈 Análise dos Clusters
+- Cluster 2 → Placas completas, legíveis.
+- Cluster 1 → Casos duvidosos, poucos caracteres.
+- Cluster 0 → Placas ausentes ou OCR falhou.
+
+
+![Exemplo de saída com grid](caminho/da/imagem.png)
+
+
