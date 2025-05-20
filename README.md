@@ -47,16 +47,20 @@ A arquitetura do projeto é composta por três etapas principais:
   - Área do *bounding box* da moto
 - **Justificativa:** Agrupamento de motos com placas semelhantes ou características compatíveis, mesmo em casos de OCR parcial ou falho.
 
-```mermaid
-graph TD
-    A[📸 Imagens de Entrada] --> B[🕵️‍♂️ Detecção de Motos (YOLOv5)]
-    B --> C[🧾 Leitura das Placas (EasyOCR)]
-    C --> D[📊 Extração de Features]
-    D --> E[🤖 Agrupamento com KMeans]
-    E --> F[🗂️ Saída em CSV com ID, Placa, Grid e Grupo]
+## 🔁 Fluxo do Sistema
 
+[![Step1-Imagens](https://img.shields.io/badge/📸_Imagens-Entrada-blue)]()
+⬇️  
+[![Step2-Detecção](https://img.shields.io/badge/🕵️‍♂️_Detecção_de_Motos-YOLOv5-orange)]()
+⬇️  
+[![Step3-OCR](https://img.shields.io/badge/🧾_Leitura_de_Placas-EasyOCR-yellow)]()
+⬇️  
+[![Step4-Features](https://img.shields.io/badge/📊_Extração_de_Features-gray)]()
+⬇️  
+[![Step5-KMeans](https://img.shields.io/badge/🤖_Agrupamento-KMeans-blueviolet)]()
+⬇️  
+[![Step6-CSV](https://img.shields.io/badge/🗂️_Saída-CSV-green)]()
 
----
 
 ## 🏗️ Arquitetura do Projeto
 
