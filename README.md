@@ -18,7 +18,7 @@ Este projeto propõe uma solução completa de visão computacional que detecta 
 - 📷 Imagens com resoluções e posições variadas
 - 📛 Placas borradas, cortadas ou ilegíveis
 - ❌ Leitura imperfeita por OCR
-- 🧠 Falta de um dataframe real que 
+- 🧠 Falta de um dataset real que ajude na solução
 
 
 ---
@@ -47,10 +47,9 @@ A arquitetura do projeto é composta por três etapas principais:
   - Área do *bounding box* da moto
 - **Justificativa:** Agrupamento de motos com placas semelhantes ou características compatíveis, mesmo em casos de OCR parcial ou falho.
 
-```
+     +---------------------------+
+     |  📸 Imagens de entrada   |
      +--------------------------+
-       |  📸 Imagens de entrada   |
-       +--------------------------+
                     |
                     v
        +--------------------------+
@@ -85,7 +84,6 @@ A arquitetura do projeto é composta por três etapas principais:
    | - Grupo identificado pelo modelo KMeans         |
    +--------------------------------------------------+
 
-```
 ---
 
 ## 🏗️ Arquitetura do Projeto
