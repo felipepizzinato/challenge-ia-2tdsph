@@ -9,7 +9,17 @@
 
 ## 📌 Descrição do Problema
 
-Este projeto tem como objetivo identificar motos em imagens e agrupá-las corretamente, utilizando suas placas como principal critério de identificação. A solução abrange desde a detecção da moto até a extração da placa via OCR, validação do formato e agrupamento de motos semelhantes — mesmo quando a leitura da placa não for perfeita.
+Este projeto propõe uma solução completa de visão computacional que detecta **motos em imagens**, extrai e interpreta suas **placas** via OCR, e **agrupa os veículos** com base em características visuais e textuais. A motivação principal é lidar com situações em que a leitura da placa pode estar **parcialmente ilegível** ou **ocultada**, mas ainda assim gerar agrupamentos úteis para análise e rastreamento.
+
+---
+
+**Desafios enfrentados:**
+
+- 📷 Imagens com resoluções e posições variadas
+- 📛 Placas borradas, cortadas ou ilegíveis
+- ❌ Leitura imperfeita por OCR
+- 🧠 Falta de um dataframe real que 
+
 
 ---
 
@@ -36,6 +46,44 @@ A arquitetura do projeto é composta por três etapas principais:
   - Número de letras e dígitos
   - Área do *bounding box* da moto
 - **Justificativa:** Agrupamento de motos com placas semelhantes ou características compatíveis, mesmo em casos de OCR parcial ou falho.
+
+     +--------------------------+
+       |  📸 Imagens de entrada   |
+       +--------------------------+
+                    |
+                    v
+       +--------------------------+
+       | 🕵️‍♂️ Detecção de motos  |
+       | (YOLOv5 - Ultralytics)   |
+       +--------------------------+
+                    |
+                    v
+ +------------------------------------------+
+ | 🧾 OCR para leitura de placas (EasyOCR)  |
+ +------------------------------------------+
+                    |
+                    v
++------------------------------------------------------+
+| 📊 Extração de features:                             |
+| - Tamanho da placa                                   |
+| - Nº de letras e dígitos                             |
+| - Área da caixa delimitadora (bounding box)          |
++------------------------------------------------------+
+                    |
+                    v
+   +--------------------------------------------+
+   | 🤖 Agrupamento com KMeans (n_clusters=3)   |
+   +--------------------------------------------+
+                    |
+                    v
+   +--------------------------------------------------+
+   | 🗂️ Saída CSV com:                               |
+   | - Moto ID por imagem                            |
+   | - Placa extraída                                 |
+   | - Grid em que a moto está                       |
+   | - Grupo identificado pelo modelo KMeans         |
+   +--------------------------------------------------+
+
 
 ---
 
