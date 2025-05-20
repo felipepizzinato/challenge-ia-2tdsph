@@ -47,6 +47,7 @@ A arquitetura do projeto é composta por três etapas principais:
   - Área do *bounding box* da moto
 - **Justificativa:** Agrupamento de motos com placas semelhantes ou características compatíveis, mesmo em casos de OCR parcial ou falho.
 
+```
      +--------------------------+
        |  📸 Imagens de entrada   |
        +--------------------------+
@@ -84,7 +85,7 @@ A arquitetura do projeto é composta por três etapas principais:
    | - Grupo identificado pelo modelo KMeans         |
    +--------------------------------------------------+
 
-
+```
 ---
 
 ## 🏗️ Arquitetura do Projeto
