@@ -162,4 +162,13 @@ A arquitetura do projeto é composta por três etapas principais:
 ![Exemplo de saída com grid](data/imagens/resultado-imagem4-exemplo.jpeg)
 ![Exemplo de saída com grid](data/imagens/resultado-imagem5-exemplo.jpeg)
 
+---
+
+## 👥 Integrantes
+
+| Nome Completo	    | RM    |
+|-------------------|-------|
+| Gustavo Sandrini	|557505 |
+| Eduarda Tiemi	    |554756 |
+| Felipe Pizzinato	|555141 |
 
