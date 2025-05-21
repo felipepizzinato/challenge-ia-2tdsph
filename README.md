@@ -90,6 +90,46 @@ A arquitetura do projeto é composta por três etapas principais:
    +--------------------------------------------------+
 ```
 
+---
+
+## 📊 Resultados
+- O sistema detecta motos em imagens e tenta extrair placas com OCR.
+
+- As placas são validadas e, quando possíveis, agrupadas por similaridade.
+
+- Mesmo placas parcialmente ilegíveis são agrupadas por semelhança (usando KMeans).
+
+--- 
+
+## 📷 Exemplos de entrada e saída com grid 
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem2.jpeg)
+
+# Depois 
+
+![Exemplo de saída com grid](data/imagens/resultado-imagem2-exemplo.jpeg)
+
+---
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem4.jpeg)
+
+# Depois 
+
+![Exemplo de saída com grid](data/imagens/resultado-imagem4-exemplo.jpeg)
+
+---
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem5.jpeg)
+
+# Depois 
+
+![Exemplo de saída com grid](data/imagens/resultado-imagem5-exemplo.jpeg)
 
 
 ## 🏗️ Arquitetura do Projeto
@@ -120,30 +160,6 @@ A arquitetura do projeto é composta por três etapas principais:
 | 📊 Dados              | Pandas, NumPy                        |
 | 📷 Visualização       | Matplotlib                          |
 
----
-
-## 📊 Resultados
-- O sistema detecta motos em imagens e tenta extrair placas com OCR.
-
-- As placas são validadas e, quando possíveis, agrupadas por similaridade.
-
-- Mesmo placas parcialmente ilegíveis são agrupadas por semelhança (usando KMeans).
-
-## 📎 Observações Finais
-- As imagens podem conter placas ilegíveis ou moto com placas ausentes — o sistema tenta identificar padrões em outros atributos (área, formato, quantidade de letras/dígitos).
-
-- Visualizações das motos e seus grids estão disponíveis no notebook pitch_visualizacao.ipynb.
-
-- código foi modularizado para facilitar expansão e manutenções futuras.
-
-## 🧠 Futuras Melhorias 
-
-- Adicionar validação com regex mais robusta (ex: padrão Mercosul)
-
-- Interface Web para uploads e resultados instantâneos
-
-- Uso de embeddings ou modelos supervisionados para similaridade entre placas
-  
 
 ---
 
@@ -156,38 +172,6 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ---
 
-## 📷 Exemplo de entrada e saída com grid 
-
-# Antes 
-
-![Exemplo de saída com grid](data/imagens/imagem2.jpeg)
-
-# Depois 
-
-![Exemplo de saída com grid](data/imagens/resultado-imagem2-exemplo.jpeg)
-
----
-
-# Antes 
-
-![Exemplo de saída com grid](data/imagens/imagem4.jpeg)
-
-# Depois 
-
-![Exemplo de saída com grid](data/imagens/resultado-imagem4-exemplo.jpeg)
-
----
-
-# Antes 
-
-![Exemplo de saída com grid](data/imagens/imagem5.jpeg)
-
-# Depois 
-
-![Exemplo de saída com grid](data/imagens/resultado-imagem5-exemplo.jpeg)
-
----
-
 ## 👥 Integrantes
 
 | Nome Completo	    | RM    |
@@ -195,4 +179,24 @@ A arquitetura do projeto é composta por três etapas principais:
 | Gustavo Sandrini	|557505 |
 | Eduarda Tiemi	    |554756 |
 | Felipe Pizzinato	|555141 |
+
+---
+
+## 📎 Observações Finais
+- As imagens podem conter placas ilegíveis ou moto com placas ausentes — o sistema tenta identificar padrões em outros atributos (área, formato, quantidade de letras/dígitos).
+
+- Visualizações das motos e seus grids estão disponíveis no notebook pitch_visualizacao.ipynb.
+
+- código foi modularizado para facilitar expansão e manutenções futuras.
+
+---
+
+## 🧠 Futuras Melhorias 
+
+- Adicionar validação com regex mais robusta (ex: padrão Mercosul)
+
+- Interface Web para uploads e resultados instantâneos
+
+- Uso de embeddings ou modelos supervisionados para similaridade entre placas
+  
 
