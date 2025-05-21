@@ -9,17 +9,7 @@
 
 ## 📌 Descrição do Problema
 
-Este projeto propõe uma solução completa de visão computacional que detecta **motos em imagens**, extrai e interpreta suas **placas** via OCR, e **agrupa os veículos** com base em características visuais e textuais. A motivação principal é lidar com situações em que a leitura da placa pode estar **parcialmente ilegível** ou **ocultada**, mas ainda assim gerar agrupamentos úteis para análise e rastreamento.
-
----
-
-**Desafios enfrentados:**
-
-- 📷 Imagens com resoluções e posições variadas
-- 📛 Placas borradas, cortadas ou ilegíveis
-- ❌ Leitura imperfeita por OCR
-- 🧠 Falta de um dataset real que ajude na solução
-
+Há uma ausência de um sistema eficaz de gestão de frotas nos pátios das filiais da empresa Mottu, o que se reflete na falta de automatização na identificação e controle das motocicletas. Com isso, a localização e conferência dos veículos são feitas manualmente, tornando o processo mais lento, sujeito a erros e menos eficiente.
 
 ---
 
@@ -131,6 +121,16 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ![Exemplo de saída com grid](data/imagens/resultado-imagem5-exemplo.jpeg)
 
+---
+
+## 🧪 Validação/Resultados
+
+## 📈 Análise dos Clusters
+- Cluster 2 → Placas completas, legíveis.
+- Cluster 1 → Casos duvidosos, poucos caracteres.
+- Cluster 0 → Placas ausentes ou OCR falhou.
+
+---
 
 ## 🏗️ Arquitetura do Projeto
 
@@ -160,16 +160,6 @@ A arquitetura do projeto é composta por três etapas principais:
 | 📊 Dados              | Pandas, NumPy                        |
 | 📷 Visualização       | Matplotlib                          |
 
-
----
-
-## 🧪 Validação/Resultados
-
-## 📈 Análise dos Clusters
-- Cluster 2 → Placas completas, legíveis.
-- Cluster 1 → Casos duvidosos, poucos caracteres.
-- Cluster 0 → Placas ausentes ou OCR falhou.
-
 ---
 
 ## 👥 Integrantes
@@ -181,6 +171,16 @@ A arquitetura do projeto é composta por três etapas principais:
 | Felipe Pizzinato	|555141 |
 
 ---
+
+**Desafios enfrentados:**
+
+- 📷 Imagens com resoluções e posições variadas
+- 📛 Placas borradas, cortadas ou ilegíveis
+- ❌ Leitura imperfeita por OCR
+- 🧠 Falta de um dataset real que ajude na solução
+
+---
+
 
 ## 📎 Observações Finais
 - As imagens podem conter placas ilegíveis ou moto com placas ausentes — o sistema tenta identificar padrões em outros atributos (área, formato, quantidade de letras/dígitos).
