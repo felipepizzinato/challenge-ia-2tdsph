@@ -156,10 +156,34 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ---
 
-## 📷 Exemplo de saída com grid 
+## 📷 Exemplo de entrada e saída com grid 
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem2.jpeg)
+
+# Depois 
 
 ![Exemplo de saída com grid](data/imagens/resultado-imagem2-exemplo.jpeg)
+
+---
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem4.jpeg)
+
+# Depois 
+
 ![Exemplo de saída com grid](data/imagens/resultado-imagem4-exemplo.jpeg)
+
+---
+
+# Antes 
+
+![Exemplo de saída com grid](data/imagens/imagem5.jpeg)
+
+# Depois 
+
 ![Exemplo de saída com grid](data/imagens/resultado-imagem5-exemplo.jpeg)
 
 ---
