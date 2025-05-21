@@ -155,7 +155,7 @@ A arquitetura do projeto é composta por três etapas principais:
 - Cluster 0 → Placas ausentes ou OCR falhou.
 
 
-![Exemplo de saída com grid](\data\imagens\resultado-imagem4-exemplo.jpeg)
+![Exemplo de saída com grid](data/imagens/resultado-imagem2-exemplo.jpeg)
 ![Exemplo de saída com grid](caminho/da/imagem.png)
 ![Exemplo de saída com grid](caminho/da/imagem.png)
 
