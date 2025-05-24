@@ -202,6 +202,6 @@ A arquitetura do projeto é composta por três etapas principais:
 
 ---
 
-[![YouTube](https://img.shields.io/badge/YouTube-Video-red?logo=youtube)]([https://www.youtube.com/watch?v=SEU_VIDEO_ID](https://youtu.be/c-foKy2SKlU))
+## PITCH DA SOLUÇÃO
 
 [![YouTube](https://img.shields.io/badge/Youtube-Assistir-red?style=for-the-badge&logo=youtube)](https://youtu.be/c-foKy2SKlU)
