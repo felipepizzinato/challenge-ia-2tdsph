@@ -198,5 +198,10 @@ A arquitetura do projeto é composta por três etapas principais:
 - Interface Web para uploads e resultados instantâneos
 
 - Uso de embeddings ou modelos supervisionados para similaridade entre placas
-  
+
+
+---
+
+[![YouTube](https://img.shields.io/badge/YouTube-Video-red?logo=youtube)]([https://www.youtube.com/watch?v=SEU_VIDEO_ID](https://youtu.be/c-foKy2SKlU))
+
 
